@@ -150,7 +150,7 @@ class TwoWayFpn(nn.Module):
 
         #x32 size
         # [B, C, x32W, x32H]
-        b_up_x32 = inputs['reduction_5']
+        b_up_x32 = inputs['reduction_6']
         # [B, C, x32W, x32H] -> [B, 256, x32W, x32H]
         b_up_x32 = self.conv_b_up_x32(b_up_x32)
         b_up_x32 = self.iabn_b_up_x32(b_up_x32)
@@ -162,7 +162,7 @@ class TwoWayFpn(nn.Module):
 
         # x32 size
         # [B, C, x32W, x32H]
-        t_dn_x32 = inputs['reduction_5']
+        t_dn_x32 = inputs['reduction_6']
         # [B, C, x32W, x32H] -> [B, 256, x32W, x32H]
         t_dn_x32 = self.conv_t_dn_x32(t_dn_x32)
         t_dn_x32 = self.iabn_t_dn_x32(t_dn_x32)

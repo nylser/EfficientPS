@@ -51,7 +51,7 @@ TEST:
 
 # DATA
 # Path to cityscapes dataset
-DATASET_PATH: "/home/ubuntu/Elix/cityscapes"
+DATASET_PATH: "/home/imech036/Downloads"
 TRAIN_JSON: "gtFine/cityscapes_panoptic_train.json"
 VALID_JSON: "gtFine/cityscapes_panoptic_val.json"
 PRED_DIR: "preds" # Path of images generated in the dataset folder
@@ -83,8 +83,8 @@ CALLBACKS:
   CHECKPOINT_DIR: "logs/test"
 
 # Path to load a model
-CHECKPOINT_PATH: ""
-BATCH_SIZE: 3
+CHECKPOINT_PATH: "checkpoints"
+BATCH_SIZE: 4
 PRECISION: 16 # Bit precision for mix precision training
 NUM_CLASS: 19
 MODEL_CUSTOM:

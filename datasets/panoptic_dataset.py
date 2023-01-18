@@ -104,7 +104,7 @@ class PanopticDataset(Dataset):
         instance = Instances(panoptic.shape)
 
         # Create semantic segmentation target with augmented data
-        semantic = np.zeros_like(panoptic, dtype=np.long)
+        semantic = np.zeros_like(panoptic, dtype=np.int_)
         rpn_mask = np.zeros_like(panoptic)
         instance_mask = []
         instance_cls = []

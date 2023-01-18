@@ -119,7 +119,7 @@ class EffificientPS(pl.LightningModule):
             'monitor': 'PQ'
         }
 
-    def optimizer_step(self, current_epoch, batch_nb, optimizer, optimizer_idx, closure, on_tpu=False, using_native_amp=False, using_lbfgs=False):
+    def optimizer_step(self, current_epoch, batch_nb, optimizer, optimizer_idx, closure, on_tpu=False, using_lbfgs=False):
         # warm up lr
         if self.trainer.global_step < self.cfg.SOLVER.WARMUP_ITERS:
             lr_scale = min(1., float(self.trainer.global_step + 1) /
